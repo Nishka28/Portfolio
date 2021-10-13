@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="travel.css">
+    <link rel="stylesheet" href="achievement.css">
+    <style>
+        table{
+            border: 2px solid black;
+            margin: 5px;
+        }
+        input[type="text"]{
+            font-size: 20px;
+            color: blue;
+        }
+        input[type="button"]{
+            border-radius: 50%;
+            padding: 10px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function mult(){
+            var n=parseInt(document.getElementById("no").value);
+            for(var a=1; a<=10; a++)
+            {
+                document.getElementById("mul").innerHTML += n+" x "+ a + " = " + (n*a) +"<br>";
+            }
+        }
+        function sum_nat()
+        {
+        n=document.getElementById("no1").value;
+        sum=0;
+        for(var i=1; i<=n; i++)
+        { sum = sum+i; }
+        document.getElementById('sum').innerHTML="Sum of first "+n+" natural numbers is: "+ sum;
+        }
+        function clock()
+                        {
+                            var wd=['Sunday','Monday','Tuesday','Wedbesday','Thursday','Friday','Saturday']
+                            var h=new Date().getHours();
+                            var m=new Date().getMinutes();
+                            var s=new Date().getSeconds();
+                            var d=new Date().getDay();
+                            if (h<10)
+                            { h='0'+h;}
+                            if (m<10)
+                            { m='0'+m;}
+                            if (s<10)
+                            { s='0'+s;}
+                            document.getElementById("dispclk").innerHTML=h+":"+m+":"+s+", "+wd[d];
+                            refresh();
+                        }
+                        function refresh(){
+                            var r=1000;
+                            myt=setTimeout('clock()', r);
+                        }
+    </script>
+</head>
+<body onload="clock()">
+<header>
+        <div id="logo" class='block'>
+            <!-- <img src="Images/Myself.JPG" alt=""> -->
+            <!-- <h3 class='block'>Nishka Bharade</h3> -->
+            <nav>
+                <a href="#about">About</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#travel">Traveling</a>
+                <a href="#achievement">Achievement</a>
+                <a href="#Javascript">Javascript Projects</a>
+                <a href="#feedback">Feedback Form</a>
+            </nav>
+        </div>
+
+</header>
+<main id="content">
+    <div id="main-cont" >        
+            <h1 class='block'>Nishka Bharade</h1>
+            <img src="Images/Nishka_left .JPG" id="index-img" alt="" float="right">
+    </div>
+
+    <div id="about-content">
+        <a id="about"></a> <br>
+        <h1 style="font-family: cursive; background-image: url('images/multi.jpg'); font-size: 50px; text-align: center; color: aquamarine;">Here is some information about myself!</h1>
+<hr>
+    <br><br>
+        
+        <p>I am 13 years old.</p>
+        <p>I live in Issaquah, Washington</p>
+        <p>I was born in Vidisha,MP,India.</p>
+        <p>My birthday is on October 28th, 2007.</p>
+        <p>As of 2021-2022, I am in 8th grade.</p>
+        <p>I study in Issaquah Middle School.</p>
+        <p>I have visited India and California</p>
+        <p>In my family I have my mom,dad,my younger sister, and myself.</p>
+    </div>
+
+    <div id="hobbies-content" >
+        <a id="hobbies"></a> <br>
+        <h1 style="font-family: cursive; background-image: url('images/multi.jpg'); font-size: 50px; text-align: center; color: aquamarine;">My Favorite Hobbies!</h1>
+<hr>
+<br><br>
+    <h1><b>Photgraphy</b></h1>
+        <p> Photography is one of my favorite hobbies.</p>
+        <p> I like it because it teaches different techniques of taking photos.</p>
+        <br> <br>
+    <h1><b>Swimming</b></h1>
+        <p>I love swimming because I love playing with water.</p>
+        <p>Swimming teaches different stroke techniques which can be useful in the future.</p>
+<hr>
+    </div>
+
+    <div id="travel-content" >
+        <a id="travel"></a> <br>
+        <h1 style="font-family: cursive; background-image: url('images/multi.jpg'); font-size: 50px; text-align: center; color: aquamarine;">My Travel Diaries</h1>
+        <div class="head_section"> 
+            <h1>Flowers In Tulip</h1>
+            <img src="images/Nishka Closeup.jpeg" >
+        </div>
+        <!-- Row 1 for images -->
+        <div class="row"> 
+            <h1>Memorable Days in Tulip</h1>
+            <div class="image_section">
+                <img src="images/Tulip 1.JPG">
+                <div class='con'>
+                    <p>Colorful Flower in Rows</p>
+                </div>
+            </div>
+            <div class="image_section">
+                <img src="images/Tulip 2.JPG">
+                <div class='con'>
+                    <p>Purple Flowers in a Line</p>
+                </div>
+            </div>
+            <div class="image_section">
+                <img src="images/Tulip 3.JPG">
+                <div class='con'>
+                    <p>Flowers Take a Turn</p>
+                </div>
+            </div>
+            <!-- <div class="image_section">
+                <img src="images/Tulip 4.JPG">
+                <div class='con'>
+                    <p>Flower With Colors Blended</p>
+                </div>
+            </div> -->
+        </div> <!--End of image row-->
+    <div class="head_section"> 
+                <h1>Exploring the Cold Days at Issaquah</h1>
+                <img src="images/Nishka Snow Closeup.jpeg" >
+    </div>
+    <!-- Row 2 for images -->
+    <div class="row"> 
+        <h1>Memorable Days in Winter</h1>
+        <div class="image_section">
+            <img src="images/Snow 1.JPG">
+            <div class='con'>
+                <p>Tree Covered With Snow</p>
+            </div>
+        </div>
+        <div class="image_section">
+            <img src="images/Snow 2.JPG">
+            <div class='con'>
+                <p>Garden covered in Snow</p>
+            </div>
+        </div>
+        <div class="image_section">
+            <img src="images/facial closeups .jpg">
+            <div class='con'>
+                <p>Camera Inside Rear Mirror</p>
+            </div>
+        </div>
+        <!-- <div class="image_section">
+            <img src="images/Snow on Road.JPG">
+            <div class='con'>
+                <p>Road Coated in Snow</p>
+            </div>
+        </div> -->
+    </div> <!--End of image row-->
+    
+    
+    <!-- Row 3 for videos -->
+    <div class="row">
+        <h1>My Traveling Videos: </h1>
+        <div class="image_section">
+            <video controls>
+                <source src="Videos/Fun Time In The Car.mp4" type="video/mp4">
+            </video>
+            <div class='con'>
+                <p>Fun Time in Car While Traveling</p>
+            </div>
+        </div>
+        <div class="image_section">
+            <video controls>
+                <source src="Videos/Fun Time In Snow.mp4" type="video/mp4">
+            </video>
+            <div class='con'>
+                <p>Snow Time in Leavenworth</p>
+            </div>
+        </div>
+    </div>
+<!-- End of video row  -->
+    </div>
+<!-- End of travel diaries -->
+    <div id="achievement-content">
+        <a id="achievement"></a> <br>
+        <h1 style="font-family: cursive; background-image: url('images/multi.jpg'); font-size: 50px; text-align: center; color: aquamarine;">My Achievements</h1>
+        <div class="row">
+            <h1>Gurukul Achievements</h1>
+            <div class="image_section">
+            <img src="Images/Gurukul Logo.jpg">
+            </div>
+            <div class="image_section">
+                <img src="Images/Swim Team Logo.jpg">
+                <div class="con">
+                    <p>Swim Team Achievements</p>
+                </div>
+            </div>
+                <!-- <table>
+                    <tr>
+                        <td></td>
+                        <td><center>Swim Team Achievements</center></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/Gurukul Logo.jpg" alt=""></td>
+                        <td><img src="images/Swim Team Logo.jpg" alt=""></td>
+                    </tr>
+                </table> -->
+        </div>
+        <!-- Row 1 for images -->
+        <div class="row">
+            <div class="image_section">
+                <img src="Images/Gurukul Graduation.jpeg">
+                <div class="con">
+                <p>Gurukul Graduation Level 6</p>
+                </div>
+            </div>
+            <div class="image_section">
+                <img src="Images/Swim Team 2021.jpeg">
+                <div class="con">
+                    <p>Swim Team 2 years of completion</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div id="Javascript">
+        <a id="Javascript"></a> <br>
+        <h1 style="font-family: cursive; background-image: url('images/multi.jpg'); font-size: 50px; text-align: center; color: aquamarine;">JavaScript Projects</h1>
+        <div class="row">
+            <div class="image_section">
+            <h1 style="font-size:32px;">Calculator</h1>
+            <form id="disp">
+                <table>
+                    <tr>
+                        <td colspan="4"><input type="text" id="res" disabled></td>
+                    </tr>
+            
+                    <tr>
+                        <td> <input type="button" name="b1" value="1" onclick="disp.res.value+= '1'"></input> </td>
+                        <td> <input type="button" name="b2" value="2" onclick="disp.res.value+= '2'"></input> </td>
+                        <td> <input type="button" name="b3" value="3" onclick="disp.res.value+= '3'"></input> </td>
+                        <td> <input type="button" name="bAdd" value="+" onclick="disp.res.value+= '+'"></input> </td>
+                    </tr>
+            
+                    <tr>
+                        <td> <input type="button" name="b4" value="4" onclick="disp.res.value+= '4'"></input> </td>
+                        <td> <input type="button" name="b5" value="5" onclick="disp.res.value+= '5'"></input> </td>
+                        <td> <input type="button" name="b6" value="6" onclick="disp.res.value+= '6'"></input> </td>
+                        <td> <input type="button" name="bSub" value="-" onclick="disp.res.value+= '-'"></input> </td>
+                    </tr>
+            
+                    <tr>
+                        <td> <input type="button" name="b7" value="7" onclick="disp.res.value+= '7'"></input> </td>
+                        <td> <input type="button" name="b8" value="8" onclick="disp.res.value+= '8'"></input> </td>
+                        <td> <input type="button" name="b9" value="9" onclick="disp.res.value+= '9'"></input> </td>
+                        <td> <input type="button" name="bMul" value="x" onclick="disp.res.value+= '*'"></input> </td>
+                    </tr>
+            
+                    <tr>
+                        <td> <input type="button" name="bC" value="C" onclick="disp.res.value= ''"></input> </td>
+                        <td> <input type="button" name="b0" value="0" onclick="disp.res.value+= '0'"></input> </td>
+                        <td> <input type="button" name="bDiv" value="/" onclick="disp.res.value+= '/'"></input> </td>
+                        <td> <input type="button" name="bEqual" value="=" onclick="disp.res.value=eval(disp.res.value)
+                            "></input> </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+            <div class="image_section">
+                <h1 style="font-size:32px;">Multiplication table</h1>
+                <label for="no">Enter the number for generating the Multiplication table: </label>
+                <input type="text" id="no">
+                <button onclick="mult()">Click!</button>
+                <p id="mul" style="background-color: blanchedalmond; padding:10px;"></p>
+            </div>
+            <div class="image_section">
+                <h1 style="font-size:32px;">Sum of first N Natural numbers</h1>
+                <label for="no1">Enter the number: </label>
+                <input type="text" id="no1">
+                <button onclick="sum_nat()">Click!</button>
+                <p id="sum">
+
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image_section">
+                <h1 style="font-size:50px;">Sad Smiley</h1>
+                    <canvas id="c2" height="300" width="400" style="border: 2px solid black;"></canvas>
+                        <script>
+                            canva=document.getElementById("c2");
+                            pen=canva.getContext("2d");
+                            //circle
+                            pen.beginPath();
+                            pen.arc(200, 150, 100, 0, 360);
+                            pen.fillStyle="yellow";
+                            pen.fill();
+                            pen.stroke();
+
+                            // right eye
+                            pen.beginPath();
+                            pen.arc(150, 150, 25, 0, 360);
+                            pen.stroke();
+
+                            // eye ball right
+                            pen.beginPath();
+                            pen.arc(150, 150, 15, 0, 360);
+                            pen.fillStyle="black";
+                            pen.fill();
+                            pen.stroke();
+
+                            // left eye
+                            pen.beginPath();
+                            pen.arc(250, 150, 25, 0, 360);
+                            pen.stroke();
+
+                            // eye ball left
+                            pen.beginPath();
+                            pen.arc(250, 150, 15, 0, 360);
+                            pen.fillStyle="black";
+                            pen.fill();
+                            pen.stroke();
+
+                            //sad smile
+                            pen.beginPath();
+                            pen.arc(200, 220, 50, 3.5, 1.9*Math.PI);
+                            pen.stroke();
+
+                    </script>
+                
+            </div>
+            <div class="image_section">
+                    <h1 style="font-size:50px;">Happy Smiley</h1>
+                    <canvas id="c1" height="300" width="400" style="border: 2px solid black;"></canvas>
+                        <script>
+                            canva=document.getElementById("c1");
+                            pen=canva.getContext("2d");
+                            //circle
+                            pen.beginPath();
+                            pen.arc(200, 150, 100, 0, 360);
+                            pen.fillStyle="yellow";
+                            pen.fill();
+                            pen.stroke();
+
+                            // right eye
+                            pen.beginPath();
+                            pen.arc(150, 150, 25, 0, 360);
+                            pen.stroke();
+
+                            // eye ball right
+                            pen.beginPath();
+                            pen.arc(150, 150, 15, 0, 360);
+                            pen.fillStyle="black";
+                            pen.fill();
+                            pen.stroke();
+
+                            // left eye
+                            pen.beginPath();
+                            pen.arc(250, 150, 25, 0, 360);
+                            pen.stroke();
+
+                            // eye ball left
+                            pen.beginPath();
+                            pen.arc(250, 150, 15, 0, 360);
+                            pen.fillStyle="black";
+                            pen.fill();
+                            pen.stroke();
+
+                            //smile
+                            pen.beginPath();
+                            pen.arc(200, 170, 50, 0.2, 0.9*Math.PI);
+                            pen.stroke();
+
+                    </script>
+            </div>
+            <div class="image_section" >
+                    <h1 style="font-size: 50px;">Clock</h1>
+                    <p id="dispclk" style="border: 2px solid blue; font-size: 200%; font-weight: bolder; padding:10px; color: rgb(12, 35, 241);">
+
+                    </p>
+            </div>   
+        </div>
+    </div>
+
+  </main>
+
+<footer>
+    <a name ="feedback"> <h1>Feedback form</h1> </a>
+    <form action="mailto:nishkabharade@gmail.com" method="POST">
+        <label for="nam">Enter your name: </label>
+        <input type="text" name="nam" value=" "> <br><br>
+        <label for="gender">Choose your gender</label> <br>
+        <input type="radio" name="gender" value="Male">Male <br>
+        <input type="radio" name="gender" value="Female">Female <br><br>
+<br><br>
+        <label for="comment">What is something you liked about my presentation?</label> <br>
+        <textarea name="comment" id="" cols="50" rows="20">Write here!</textarea>
+        
+<br><br>
+        <label for="comment">What is something you disliked about my presentation?</label> <br>
+        <textarea name="comment" id="" cols="50" rows="20">Write Here!</textarea>
+        <br><br>
+        <input type="submit">
+    </form>
+</footer>
+</body>
+</html>
